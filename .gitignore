@@ -1,0 +1,39 @@
+# Python & Virtual environment
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+ENV/
+
+# Data & ML Artifacts
+data/raw/
+data/processed/
+data/dicom/
+*.dcm
+*.nii
+*.nii.gz
+*.pt
+*.onnx
+*.h5
+ml/reports/*.png
+ml/reports/*.jpg
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vscode/
+.idea/
+
+# Backend & Secrets
+.env
+.env.production
+*.log
+*.sqlite3
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db

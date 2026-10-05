@@ -1,0 +1,356 @@
+patient_id,subtype,total_series,ct_series_count,pet_series_count,other_series_count,total_ct_slices,status,exclusion_reason,has_xml_roi
+Lung_Dx-A0032,Adenocarcinoma (ADC),2,2,0,0,220,Usable,,True
+Lung_Dx-A0001,Adenocarcinoma (ADC),2,2,0,0,128,Usable,,True
+Lung_Dx-A0002,Adenocarcinoma (ADC),2,2,0,0,60,Usable,,True
+Lung_Dx-A0003,Adenocarcinoma (ADC),6,6,0,0,70,Usable,,True
+Lung_Dx-A0004,Adenocarcinoma (ADC),3,3,0,0,59,Usable,,True
+Lung_Dx-A0005,Adenocarcinoma (ADC),2,2,0,0,58,Usable,,True
+Lung_Dx-A0006,Adenocarcinoma (ADC),4,4,0,0,200,Usable,,True
+Lung_Dx-A0007,Adenocarcinoma (ADC),2,2,0,0,58,Usable,,True
+Lung_Dx-A0008,Adenocarcinoma (ADC),2,2,0,0,110,Usable,,True
+Lung_Dx-A0009,Adenocarcinoma (ADC),2,2,0,0,62,Usable,,True
+Lung_Dx-A0010,Adenocarcinoma (ADC),2,2,0,0,75,Usable,,True
+Lung_Dx-A0011,Adenocarcinoma (ADC),4,4,0,0,1107,Usable,,True
+Lung_Dx-A0012,Adenocarcinoma (ADC),4,4,0,0,142,Usable,,True
+Lung_Dx-A0013,Adenocarcinoma (ADC),5,5,0,0,215,Usable,,True
+Lung_Dx-A0014,Adenocarcinoma (ADC),6,6,0,0,262,Usable,,True
+Lung_Dx-A0015,Adenocarcinoma (ADC),5,5,0,0,194,Usable,,True
+Lung_Dx-A0016,Adenocarcinoma (ADC),4,4,0,0,99,Usable,,True
+Lung_Dx-A0017,Adenocarcinoma (ADC),2,2,0,0,300,Usable,,True
+Lung_Dx-A0018,Adenocarcinoma (ADC),4,4,0,0,718,Usable,,True
+Lung_Dx-A0019,Adenocarcinoma (ADC),5,5,0,0,324,Usable,,True
+Lung_Dx-A0020,Adenocarcinoma (ADC),4,4,0,0,311,Usable,,True
+Lung_Dx-A0021,Adenocarcinoma (ADC),5,5,0,0,43,Usable,,True
+Lung_Dx-A0022,Adenocarcinoma (ADC),12,12,0,0,240,Usable,,True
+Lung_Dx-A0023,Adenocarcinoma (ADC),2,2,0,0,240,Usable,,True
+Lung_Dx-A0024,Adenocarcinoma (ADC),4,4,0,0,58,Usable,,True
+Lung_Dx-A0025,Adenocarcinoma (ADC),2,2,0,0,21,Usable,,True
+Lung_Dx-A0026,Adenocarcinoma (ADC),2,2,0,0,81,Usable,,True
+Lung_Dx-A0027,Adenocarcinoma (ADC),1,1,0,0,27,Usable,,True
+Lung_Dx-A0028,Adenocarcinoma (ADC),2,2,0,0,132,Usable,,True
+Lung_Dx-A0029,Adenocarcinoma (ADC),9,9,0,0,203,Usable,,True
+Lung_Dx-A0030,Adenocarcinoma (ADC),1,1,0,0,168,Usable,,True
+Lung_Dx-A0031,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0033,Adenocarcinoma (ADC),2,2,0,0,192,Usable,,True
+Lung_Dx-A0034,Adenocarcinoma (ADC),2,2,0,0,76,Usable,,True
+Lung_Dx-A0035,Adenocarcinoma (ADC),2,2,0,0,140,Usable,,True
+Lung_Dx-A0036,Adenocarcinoma (ADC),2,2,0,0,216,Usable,,True
+Lung_Dx-A0037,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0038,Adenocarcinoma (ADC),5,5,0,0,54,Usable,,True
+Lung_Dx-A0039,Adenocarcinoma (ADC),3,3,0,0,229,Usable,,True
+Lung_Dx-A0040,Adenocarcinoma (ADC),4,4,0,0,259,Usable,,True
+Lung_Dx-A0041,Adenocarcinoma (ADC),5,5,0,0,169,Usable,,True
+Lung_Dx-A0042,Adenocarcinoma (ADC),3,3,0,0,237,Usable,,True
+Lung_Dx-A0043,Adenocarcinoma (ADC),2,2,0,0,92,Usable,,True
+Lung_Dx-A0044,Adenocarcinoma (ADC),2,2,0,0,85,Usable,,True
+Lung_Dx-A0045,Adenocarcinoma (ADC),5,5,0,0,66,Usable,,True
+Lung_Dx-A0046,Adenocarcinoma (ADC),3,3,0,0,364,Usable,,True
+Lung_Dx-A0047,Adenocarcinoma (ADC),3,3,0,0,82,Usable,,True
+Lung_Dx-A0048,Adenocarcinoma (ADC),2,2,0,0,77,Usable,,True
+Lung_Dx-A0049,Adenocarcinoma (ADC),3,3,0,0,231,Usable,,True
+Lung_Dx-A0050,Adenocarcinoma (ADC),6,6,0,0,85,Usable,,True
+Lung_Dx-A0051,Adenocarcinoma (ADC),2,2,0,0,92,Usable,,True
+Lung_Dx-A0052,Adenocarcinoma (ADC),2,2,0,0,87,Usable,,True
+Lung_Dx-A0053,Adenocarcinoma (ADC),3,3,0,0,214,Usable,,True
+Lung_Dx-A0054,Adenocarcinoma (ADC),3,3,0,0,264,Usable,,True
+Lung_Dx-A0055,Adenocarcinoma (ADC),2,2,0,0,160,Usable,,True
+Lung_Dx-A0056,Adenocarcinoma (ADC),2,2,0,0,74,Usable,,True
+Lung_Dx-A0057,Adenocarcinoma (ADC),2,2,0,0,106,Usable,,True
+Lung_Dx-A0058,Adenocarcinoma (ADC),2,2,0,0,288,Usable,,True
+Lung_Dx-A0059,Adenocarcinoma (ADC),2,2,0,0,122,Usable,,True
+Lung_Dx-A0061,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0062,Adenocarcinoma (ADC),4,4,0,0,72,Usable,,True
+Lung_Dx-A0063,Adenocarcinoma (ADC),8,8,0,0,405,Usable,,True
+Lung_Dx-A0064,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0065,Adenocarcinoma (ADC),2,2,0,0,240,Usable,,True
+Lung_Dx-A0066,Adenocarcinoma (ADC),2,2,0,0,160,Usable,,True
+Lung_Dx-A0068,Adenocarcinoma (ADC),4,4,0,0,40,Usable,,True
+Lung_Dx-A0069,Adenocarcinoma (ADC),2,2,0,0,240,Usable,,True
+Lung_Dx-A0070,Adenocarcinoma (ADC),3,3,0,0,380,Usable,,True
+Lung_Dx-A0071,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0072,Adenocarcinoma (ADC),2,2,0,0,192,Usable,,True
+Lung_Dx-A0073,Adenocarcinoma (ADC),2,2,0,0,74,Usable,,True
+Lung_Dx-A0074,Adenocarcinoma (ADC),2,2,0,0,101,Usable,,True
+Lung_Dx-A0075,Adenocarcinoma (ADC),2,2,0,0,208,Usable,,True
+Lung_Dx-A0077,Adenocarcinoma (ADC),2,2,0,0,220,Usable,,True
+Lung_Dx-A0078,Adenocarcinoma (ADC),6,6,0,0,890,Usable,,True
+Lung_Dx-A0080,Adenocarcinoma (ADC),3,3,0,0,552,Usable,,True
+Lung_Dx-A0081,Adenocarcinoma (ADC),2,2,0,0,92,Usable,,True
+Lung_Dx-A0082,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0083,Adenocarcinoma (ADC),6,6,0,0,1363,Usable,,True
+Lung_Dx-A0084,Adenocarcinoma (ADC),6,6,0,0,1364,Usable,,True
+Lung_Dx-A0085,Adenocarcinoma (ADC),2,2,0,0,114,Usable,,True
+Lung_Dx-A0086,Adenocarcinoma (ADC),2,2,0,0,126,Usable,,True
+Lung_Dx-A0087,Adenocarcinoma (ADC),5,5,0,0,1224,Usable,,True
+Lung_Dx-A0088,Adenocarcinoma (ADC),4,4,0,0,215,Usable,,True
+Lung_Dx-A0089,Adenocarcinoma (ADC),4,4,0,0,147,Usable,,True
+Lung_Dx-A0090,Adenocarcinoma (ADC),6,6,0,0,1078,Usable,,True
+Lung_Dx-A0091,Adenocarcinoma (ADC),4,4,0,0,568,Usable,,True
+Lung_Dx-A0092,Adenocarcinoma (ADC),2,2,0,0,128,Usable,,True
+Lung_Dx-A0093,Adenocarcinoma (ADC),3,3,0,0,581,Usable,,True
+Lung_Dx-A0094,Adenocarcinoma (ADC),4,4,0,0,719,Usable,,True
+Lung_Dx-A0095,Adenocarcinoma (ADC),3,3,0,0,161,Usable,,True
+Lung_Dx-A0096,Adenocarcinoma (ADC),3,3,0,0,531,Usable,,True
+Lung_Dx-A0097,Adenocarcinoma (ADC),2,2,0,0,126,Usable,,True
+Lung_Dx-A0098,Adenocarcinoma (ADC),3,3,0,0,363,Usable,,True
+Lung_Dx-A0099,Adenocarcinoma (ADC),2,2,0,0,216,Usable,,True
+Lung_Dx-A0100,Adenocarcinoma (ADC),2,2,0,0,75,Usable,,True
+Lung_Dx-A0101,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0102,Adenocarcinoma (ADC),2,2,0,0,80,Usable,,True
+Lung_Dx-A0103,Adenocarcinoma (ADC),5,5,0,0,1020,Usable,,True
+Lung_Dx-A0104,Adenocarcinoma (ADC),6,6,0,0,1715,Usable,,True
+Lung_Dx-A0105,Adenocarcinoma (ADC),6,6,0,0,1297,Usable,,True
+Lung_Dx-A0106,Adenocarcinoma (ADC),4,4,0,0,815,Usable,,True
+Lung_Dx-A0107,Adenocarcinoma (ADC),2,2,0,0,160,Usable,,True
+Lung_Dx-A0108,Adenocarcinoma (ADC),2,2,0,0,240,Usable,,True
+Lung_Dx-A0109,Adenocarcinoma (ADC),3,3,0,0,504,Usable,,True
+Lung_Dx-A0110,Adenocarcinoma (ADC),3,3,0,0,410,Usable,,True
+Lung_Dx-A0111,Adenocarcinoma (ADC),3,3,0,0,606,Usable,,True
+Lung_Dx-A0112,Adenocarcinoma (ADC),4,4,0,0,392,Usable,,True
+Lung_Dx-A0113,Adenocarcinoma (ADC),5,5,0,0,1088,Usable,,True
+Lung_Dx-A0114,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0115,Adenocarcinoma (ADC),2,2,0,0,192,Usable,,True
+Lung_Dx-A0116,Adenocarcinoma (ADC),2,2,0,0,142,Usable,,True
+Lung_Dx-A0117,Adenocarcinoma (ADC),6,6,0,0,1166,Usable,,True
+Lung_Dx-A0118,Adenocarcinoma (ADC),1,1,0,0,156,Usable,,True
+Lung_Dx-A0119,Adenocarcinoma (ADC),2,2,0,0,116,Usable,,True
+Lung_Dx-A0120,Adenocarcinoma (ADC),2,2,0,0,192,Usable,,True
+Lung_Dx-A0121,Adenocarcinoma (ADC),2,2,0,0,111,Usable,,True
+Lung_Dx-A0123,Adenocarcinoma (ADC),2,2,0,0,180,Usable,,True
+Lung_Dx-A0124,Adenocarcinoma (ADC),2,2,0,0,106,Usable,,True
+Lung_Dx-A0125,Adenocarcinoma (ADC),2,2,0,0,176,Usable,,True
+Lung_Dx-A0126,Adenocarcinoma (ADC),5,5,0,0,1020,Usable,,True
+Lung_Dx-A0127,Adenocarcinoma (ADC),2,2,0,0,256,Usable,,True
+Lung_Dx-A0128,Adenocarcinoma (ADC),2,2,0,0,80,Usable,,True
+Lung_Dx-A0129,Adenocarcinoma (ADC),3,3,0,0,608,Usable,,True
+Lung_Dx-A0130,Adenocarcinoma (ADC),2,2,0,0,192,Usable,,True
+Lung_Dx-A0131,Adenocarcinoma (ADC),2,2,0,0,260,Usable,,True
+Lung_Dx-A0132,Adenocarcinoma (ADC),2,2,0,0,710,Usable,,True
+Lung_Dx-A0133,Adenocarcinoma (ADC),2,2,0,0,104,Usable,,True
+Lung_Dx-A0134,Adenocarcinoma (ADC),6,6,0,0,1210,Usable,,True
+Lung_Dx-A0135,Adenocarcinoma (ADC),2,2,0,0,224,Usable,,True
+Lung_Dx-A0136,Adenocarcinoma (ADC),2,2,0,0,208,Usable,,True
+Lung_Dx-A0137,Adenocarcinoma (ADC),2,2,0,0,146,Usable,,True
+Lung_Dx-A0138,Adenocarcinoma (ADC),2,2,0,0,82,Usable,,True
+Lung_Dx-A0139,Adenocarcinoma (ADC),2,2,0,0,232,Usable,,True
+Lung_Dx-A0140,Adenocarcinoma (ADC),3,3,0,0,165,Usable,,True
+Lung_Dx-A0141,Adenocarcinoma (ADC),2,2,0,0,89,Usable,,True
+Lung_Dx-A0142,Adenocarcinoma (ADC),2,2,0,0,61,Usable,,True
+Lung_Dx-A0143,Adenocarcinoma (ADC),2,2,0,0,208,Usable,,True
+Lung_Dx-A0144,Adenocarcinoma (ADC),2,2,0,0,82,Usable,,True
+Lung_Dx-A0145,Adenocarcinoma (ADC),3,3,0,0,106,Usable,,True
+Lung_Dx-A0146,Adenocarcinoma (ADC),2,2,0,0,69,Usable,,True
+Lung_Dx-A0147,Adenocarcinoma (ADC),2,2,0,0,78,Usable,,True
+Lung_Dx-A0148,Adenocarcinoma (ADC),2,2,0,0,84,Usable,,True
+Lung_Dx-A0149,Adenocarcinoma (ADC),2,2,0,0,112,Usable,,True
+Lung_Dx-A0150,Adenocarcinoma (ADC),2,2,0,0,348,Usable,,True
+Lung_Dx-A0152,Adenocarcinoma (ADC),2,2,0,0,208,Usable,,True
+Lung_Dx-A0153,Adenocarcinoma (ADC),3,3,0,0,268,Usable,,True
+Lung_Dx-A0154,Adenocarcinoma (ADC),2,2,0,0,128,Usable,,True
+Lung_Dx-A0155,Adenocarcinoma (ADC),2,2,0,0,92,Usable,,True
+Lung_Dx-A0156,Adenocarcinoma (ADC),2,2,0,0,200,Usable,,True
+Lung_Dx-A0157,Adenocarcinoma (ADC),3,3,0,0,221,Usable,,True
+Lung_Dx-A0159,Adenocarcinoma (ADC),2,2,0,0,86,Usable,,True
+Lung_Dx-A0160,Adenocarcinoma (ADC),2,2,0,0,92,Usable,,True
+Lung_Dx-A0161,Adenocarcinoma (ADC),2,2,0,0,86,Usable,,True
+Lung_Dx-A0162,Adenocarcinoma (ADC),2,2,0,0,300,Usable,,True
+Lung_Dx-A0163,Adenocarcinoma (ADC),2,2,0,0,85,Usable,,True
+Lung_Dx-A0164,Adenocarcinoma (ADC),7,6,1,0,1495,Usable,,True
+Lung_Dx-A0165,Adenocarcinoma (ADC),7,6,1,0,1771,Usable,,True
+Lung_Dx-A0166,Adenocarcinoma (ADC),7,6,1,0,1196,Usable,,True
+Lung_Dx-A0167,Adenocarcinoma (ADC),6,5,1,0,1028,Usable,,True
+Lung_Dx-A0168,Adenocarcinoma (ADC),6,5,1,0,944,Usable,,True
+Lung_Dx-A0169,Adenocarcinoma (ADC),5,4,1,0,763,Usable,,True
+Lung_Dx-A0170,Adenocarcinoma (ADC),5,4,1,0,1118,Usable,,True
+Lung_Dx-A0171,Adenocarcinoma (ADC),5,4,1,0,999,Usable,,True
+Lung_Dx-A0173,Adenocarcinoma (ADC),5,4,1,0,1136,Usable,,True
+Lung_Dx-A0174,Adenocarcinoma (ADC),5,4,1,0,1199,Usable,,True
+Lung_Dx-A0175,Adenocarcinoma (ADC),5,4,1,0,1263,Usable,,True
+Lung_Dx-A0176,Adenocarcinoma (ADC),5,4,1,0,1233,Usable,,True
+Lung_Dx-A0177,Adenocarcinoma (ADC),5,4,1,0,1270,Usable,,True
+Lung_Dx-A0178,Adenocarcinoma (ADC),6,5,1,0,1239,Usable,,True
+Lung_Dx-A0179,Adenocarcinoma (ADC),5,4,1,0,1089,Usable,,True
+Lung_Dx-A0180,Adenocarcinoma (ADC),5,4,1,0,1161,Usable,,True
+Lung_Dx-A0181,Adenocarcinoma (ADC),5,4,1,0,1469,Usable,,True
+Lung_Dx-A0182,Adenocarcinoma (ADC),5,4,1,0,1297,Usable,,True
+Lung_Dx-A0183,Adenocarcinoma (ADC),5,4,1,0,1264,Usable,,True
+Lung_Dx-A0184,Adenocarcinoma (ADC),5,4,1,0,1272,Usable,,True
+Lung_Dx-A0185,Adenocarcinoma (ADC),6,5,1,0,1195,Usable,,True
+Lung_Dx-A0187,Adenocarcinoma (ADC),4,3,1,0,677,Usable,,True
+Lung_Dx-A0188,Adenocarcinoma (ADC),5,4,1,0,831,Usable,,True
+Lung_Dx-A0189,Adenocarcinoma (ADC),5,4,1,0,920,Usable,,True
+Lung_Dx-A0190,Adenocarcinoma (ADC),5,4,1,0,869,Usable,,True
+Lung_Dx-A0191,Adenocarcinoma (ADC),5,4,1,0,1214,Usable,,True
+Lung_Dx-A0192,Adenocarcinoma (ADC),5,4,1,0,1376,Usable,,True
+Lung_Dx-A0193,Adenocarcinoma (ADC),5,4,1,0,1374,Usable,,True
+Lung_Dx-A0194,Adenocarcinoma (ADC),5,4,1,0,1267,Usable,,True
+Lung_Dx-A0195,Adenocarcinoma (ADC),5,4,1,0,1014,Usable,,True
+Lung_Dx-A0196,Adenocarcinoma (ADC),5,4,1,0,938,Usable,,True
+Lung_Dx-A0197,Adenocarcinoma (ADC),5,4,1,0,1310,Usable,,True
+Lung_Dx-A0198,Adenocarcinoma (ADC),5,4,1,0,1432,Usable,,True
+Lung_Dx-A0199,Adenocarcinoma (ADC),5,4,1,0,1436,Usable,,True
+Lung_Dx-A0200,Adenocarcinoma (ADC),5,4,1,0,1168,Usable,,True
+Lung_Dx-A0201,Adenocarcinoma (ADC),5,4,1,0,1147,Usable,,True
+Lung_Dx-A0202,Adenocarcinoma (ADC),5,4,1,0,1126,Usable,,True
+Lung_Dx-A0203,Adenocarcinoma (ADC),5,4,1,0,1209,Usable,,True
+Lung_Dx-A0204,Adenocarcinoma (ADC),5,4,1,0,1194,Usable,,True
+Lung_Dx-A0205,Adenocarcinoma (ADC),5,4,1,0,1351,Usable,,True
+Lung_Dx-A0206,Adenocarcinoma (ADC),5,4,1,0,972,Usable,,True
+Lung_Dx-A0208,Adenocarcinoma (ADC),5,4,1,0,1126,Usable,,True
+Lung_Dx-A0210,Adenocarcinoma (ADC),5,4,1,0,915,Usable,,True
+Lung_Dx-A0211,Adenocarcinoma (ADC),5,4,1,0,1027,Usable,,True
+Lung_Dx-A0212,Adenocarcinoma (ADC),5,4,1,0,995,Usable,,True
+Lung_Dx-A0213,Adenocarcinoma (ADC),5,4,1,0,925,Usable,,True
+Lung_Dx-A0214,Adenocarcinoma (ADC),5,4,1,0,929,Usable,,True
+Lung_Dx-A0216,Adenocarcinoma (ADC),7,6,1,0,2002,Usable,,True
+Lung_Dx-A0217,Adenocarcinoma (ADC),5,4,1,0,936,Usable,,True
+Lung_Dx-A0218,Adenocarcinoma (ADC),5,4,1,0,775,Usable,,True
+Lung_Dx-A0220,Adenocarcinoma (ADC),6,5,1,0,1255,Usable,,True
+Lung_Dx-A0221,Adenocarcinoma (ADC),7,6,1,0,1462,Usable,,True
+Lung_Dx-A0222,Adenocarcinoma (ADC),5,4,1,0,981,Usable,,True
+Lung_Dx-A0223,Adenocarcinoma (ADC),5,4,1,0,1105,Usable,,True
+Lung_Dx-A0224,Adenocarcinoma (ADC),5,4,1,0,1124,Usable,,True
+Lung_Dx-A0225,Adenocarcinoma (ADC),5,4,1,0,1240,Usable,,True
+Lung_Dx-A0226,Adenocarcinoma (ADC),5,4,1,0,939,Usable,,True
+Lung_Dx-A0227,Adenocarcinoma (ADC),5,4,1,0,1060,Usable,,True
+Lung_Dx-A0228,Adenocarcinoma (ADC),5,4,1,0,1084,Usable,,True
+Lung_Dx-A0229,Adenocarcinoma (ADC),5,4,1,0,705,Usable,,True
+Lung_Dx-A0230,Adenocarcinoma (ADC),5,4,1,0,871,Usable,,True
+Lung_Dx-A0231,Adenocarcinoma (ADC),5,4,1,0,792,Usable,,True
+Lung_Dx-A0232,Adenocarcinoma (ADC),5,4,1,0,1024,Usable,,True
+Lung_Dx-A0233,Adenocarcinoma (ADC),5,4,1,0,933,Usable,,True
+Lung_Dx-A0234,Adenocarcinoma (ADC),5,4,1,0,1013,Usable,,True
+Lung_Dx-A0235,Adenocarcinoma (ADC),5,4,1,0,1305,Usable,,True
+Lung_Dx-A0236,Adenocarcinoma (ADC),5,4,1,0,1097,Usable,,True
+Lung_Dx-A0237,Adenocarcinoma (ADC),5,4,1,0,1215,Usable,,True
+Lung_Dx-A0238,Adenocarcinoma (ADC),5,4,1,0,985,Usable,,True
+Lung_Dx-A0239,Adenocarcinoma (ADC),5,4,1,0,1241,Usable,,True
+Lung_Dx-A0240,Adenocarcinoma (ADC),5,4,1,0,881,Usable,,True
+Lung_Dx-A0241,Adenocarcinoma (ADC),5,4,1,0,1164,Usable,,True
+Lung_Dx-A0242,Adenocarcinoma (ADC),5,4,1,0,1309,Usable,,True
+Lung_Dx-A0243,Adenocarcinoma (ADC),5,4,1,0,653,Usable,,True
+Lung_Dx-A0244,Adenocarcinoma (ADC),5,4,1,0,961,Usable,,True
+Lung_Dx-A0246,Adenocarcinoma (ADC),5,4,1,0,966,Usable,,True
+Lung_Dx-A0247,Adenocarcinoma (ADC),5,4,1,0,919,Usable,,True
+Lung_Dx-A0248,Adenocarcinoma (ADC),5,4,1,0,1118,Usable,,True
+Lung_Dx-A0249,Adenocarcinoma (ADC),5,4,1,0,1227,Usable,,True
+Lung_Dx-A0250,Adenocarcinoma (ADC),5,4,1,0,1165,Usable,,True
+Lung_Dx-A0252,Adenocarcinoma (ADC),5,4,1,0,922,Usable,,True
+Lung_Dx-A0253,Adenocarcinoma (ADC),5,4,1,0,1797,Usable,,True
+Lung_Dx-A0254,Adenocarcinoma (ADC),5,4,1,0,1387,Usable,,True
+Lung_Dx-A0255,Adenocarcinoma (ADC),3,2,1,0,679,Usable,,True
+Lung_Dx-A0256,Adenocarcinoma (ADC),5,4,1,0,1028,Usable,,True
+Lung_Dx-A0257,Adenocarcinoma (ADC),5,4,1,0,870,Usable,,True
+Lung_Dx-A0258,Adenocarcinoma (ADC),6,5,1,0,1321,Usable,,True
+Lung_Dx-A0259,Adenocarcinoma (ADC),5,4,1,0,1229,Usable,,True
+Lung_Dx-A0260,Adenocarcinoma (ADC),5,4,1,0,1044,Usable,,True
+Lung_Dx-A0261,Adenocarcinoma (ADC),5,4,1,0,1300,Usable,,True
+Lung_Dx-A0262,Adenocarcinoma (ADC),5,4,1,0,1132,Usable,,True
+Lung_Dx-A0263,Adenocarcinoma (ADC),5,4,1,0,1145,Usable,,True
+Lung_Dx-A0264,Adenocarcinoma (ADC),5,4,1,0,955,Usable,,True
+Lung_Dx-A0265,Adenocarcinoma (ADC),5,4,1,0,985,Usable,,True
+Lung_Dx-B0001,Small Cell Lung Carcinoma (SCLC),2,2,0,0,224,Usable,,True
+Lung_Dx-B0002,Small Cell Lung Carcinoma (SCLC),2,2,0,0,192,Usable,,True
+Lung_Dx-B0003,Small Cell Lung Carcinoma (SCLC),2,2,0,0,224,Usable,,True
+Lung_Dx-B0004,Small Cell Lung Carcinoma (SCLC),2,2,0,0,112,Usable,,True
+Lung_Dx-B0005,Small Cell Lung Carcinoma (SCLC),2,2,0,0,196,Usable,,True
+Lung_Dx-B0006,Small Cell Lung Carcinoma (SCLC),2,2,0,0,92,Usable,,True
+Lung_Dx-B0007,Small Cell Lung Carcinoma (SCLC),2,2,0,0,240,Usable,,True
+Lung_Dx-B0008,Small Cell Lung Carcinoma (SCLC),3,3,0,0,218,Usable,,True
+Lung_Dx-B0009,Small Cell Lung Carcinoma (SCLC),3,3,0,0,250,Usable,,True
+Lung_Dx-B0011,Small Cell Lung Carcinoma (SCLC),2,2,0,0,82,Usable,,True
+Lung_Dx-B0012,Small Cell Lung Carcinoma (SCLC),4,4,0,0,160,Usable,,True
+Lung_Dx-B0013,Small Cell Lung Carcinoma (SCLC),2,2,0,0,36,Usable,,True
+Lung_Dx-B0014,Small Cell Lung Carcinoma (SCLC),2,2,0,0,108,Usable,,True
+Lung_Dx-B0015,Small Cell Lung Carcinoma (SCLC),2,2,0,0,75,Usable,,True
+Lung_Dx-B0016,Small Cell Lung Carcinoma (SCLC),2,2,0,0,67,Usable,,True
+Lung_Dx-B0017,Small Cell Lung Carcinoma (SCLC),2,2,0,0,192,Usable,,True
+Lung_Dx-B0018,Small Cell Lung Carcinoma (SCLC),2,2,0,0,77,Usable,,True
+Lung_Dx-B0019,Small Cell Lung Carcinoma (SCLC),3,3,0,0,197,Usable,,True
+Lung_Dx-B0020,Small Cell Lung Carcinoma (SCLC),2,2,0,0,45,Usable,,True
+Lung_Dx-B0021,Small Cell Lung Carcinoma (SCLC),2,2,0,0,224,Usable,,True
+Lung_Dx-B0022,Small Cell Lung Carcinoma (SCLC),2,2,0,0,85,Usable,,True
+Lung_Dx-B0023,Small Cell Lung Carcinoma (SCLC),2,2,0,0,82,Usable,,True
+Lung_Dx-B0024,Small Cell Lung Carcinoma (SCLC),2,2,0,0,83,Usable,,True
+Lung_Dx-B0025,Small Cell Lung Carcinoma (SCLC),2,2,0,0,244,Usable,,True
+Lung_Dx-B0026,Small Cell Lung Carcinoma (SCLC),2,2,0,0,118,Usable,,True
+Lung_Dx-B0027,Small Cell Lung Carcinoma (SCLC),2,2,0,0,82,Usable,,True
+Lung_Dx-B0028,Small Cell Lung Carcinoma (SCLC),2,2,0,0,126,Usable,,True
+Lung_Dx-B0031,Small Cell Lung Carcinoma (SCLC),3,3,0,0,153,Usable,,True
+Lung_Dx-B0033,Small Cell Lung Carcinoma (SCLC),6,5,1,0,1141,Usable,,True
+Lung_Dx-B0034,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1044,Usable,,True
+Lung_Dx-B0036,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1046,Usable,,True
+Lung_Dx-B0037,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1321,Usable,,True
+Lung_Dx-B0038,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1170,Usable,,True
+Lung_Dx-B0040,Small Cell Lung Carcinoma (SCLC),7,6,1,0,1170,Usable,,True
+Lung_Dx-B0041,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1404,Usable,,True
+Lung_Dx-B0042,Small Cell Lung Carcinoma (SCLC),5,4,1,0,801,Usable,,True
+Lung_Dx-B0043,Small Cell Lung Carcinoma (SCLC),5,4,1,0,1160,Usable,,True
+Lung_Dx-B0044,Small Cell Lung Carcinoma (SCLC),2,2,0,0,192,Usable,,True
+Lung_Dx-E0001,Large Cell Carcinoma (LCC),2,2,0,0,223,Usable,,True
+Lung_Dx-E0002,Large Cell Carcinoma (LCC),2,2,0,0,76,Usable,,True
+Lung_Dx-E0003,Large Cell Carcinoma (LCC),2,2,0,0,212,Usable,,True
+Lung_Dx-E0004,Large Cell Carcinoma (LCC),2,2,0,0,83,Usable,,True
+Lung_Dx-E0005,Large Cell Carcinoma (LCC),3,3,0,0,214,Usable,,True
+Lung_Dx-G0001,Squamous Cell Carcinoma (SCC),2,2,0,0,68,Usable,,True
+Lung_Dx-G0002,Squamous Cell Carcinoma (SCC),2,2,0,0,102,Usable,,True
+Lung_Dx-G0003,Squamous Cell Carcinoma (SCC),2,2,0,0,204,Usable,,True
+Lung_Dx-G0004,Squamous Cell Carcinoma (SCC),2,2,0,0,192,Usable,,True
+Lung_Dx-G0005,Squamous Cell Carcinoma (SCC),2,2,0,0,42,Usable,,True
+Lung_Dx-G0006,Squamous Cell Carcinoma (SCC),2,2,0,0,190,Usable,,True
+Lung_Dx-G0007,Squamous Cell Carcinoma (SCC),2,2,0,0,100,Usable,,True
+Lung_Dx-G0008,Squamous Cell Carcinoma (SCC),2,2,0,0,106,Usable,,True
+Lung_Dx-G0009,Squamous Cell Carcinoma (SCC),2,2,0,0,86,Usable,,True
+Lung_Dx-G0010,Squamous Cell Carcinoma (SCC),2,2,0,0,30,Usable,,True
+Lung_Dx-G0011,Squamous Cell Carcinoma (SCC),2,2,0,0,200,Usable,,True
+Lung_Dx-G0012,Squamous Cell Carcinoma (SCC),2,2,0,0,240,Usable,,True
+Lung_Dx-G0013,Squamous Cell Carcinoma (SCC),2,2,0,0,208,Usable,,True
+Lung_Dx-G0014,Squamous Cell Carcinoma (SCC),3,3,0,0,271,Usable,,True
+Lung_Dx-G0015,Squamous Cell Carcinoma (SCC),2,2,0,0,57,Usable,,True
+Lung_Dx-G0016,Squamous Cell Carcinoma (SCC),2,2,0,0,224,Usable,,True
+Lung_Dx-G0017,Squamous Cell Carcinoma (SCC),2,2,0,0,248,Usable,,True
+Lung_Dx-G0018,Squamous Cell Carcinoma (SCC),2,2,0,0,256,Usable,,True
+Lung_Dx-G0019,Squamous Cell Carcinoma (SCC),2,2,0,0,126,Usable,,True
+Lung_Dx-G0020,Squamous Cell Carcinoma (SCC),2,2,0,0,118,Usable,,True
+Lung_Dx-G0021,Squamous Cell Carcinoma (SCC),2,2,0,0,224,Usable,,True
+Lung_Dx-G0022,Squamous Cell Carcinoma (SCC),2,2,0,0,212,Usable,,True
+Lung_Dx-G0023,Squamous Cell Carcinoma (SCC),2,2,0,0,220,Usable,,True
+Lung_Dx-G0024,Squamous Cell Carcinoma (SCC),2,2,0,0,120,Usable,,True
+Lung_Dx-G0025,Squamous Cell Carcinoma (SCC),2,2,0,0,248,Usable,,True
+Lung_Dx-G0026,Squamous Cell Carcinoma (SCC),2,2,0,0,208,Usable,,True
+Lung_Dx-G0027,Squamous Cell Carcinoma (SCC),2,2,0,0,200,Usable,,True
+Lung_Dx-G0028,Squamous Cell Carcinoma (SCC),2,2,0,0,256,Usable,,True
+Lung_Dx-G0029,Squamous Cell Carcinoma (SCC),2,2,0,0,224,Usable,,True
+Lung_Dx-G0030,Squamous Cell Carcinoma (SCC),4,4,0,0,250,Usable,,True
+Lung_Dx-G0031,Squamous Cell Carcinoma (SCC),2,2,0,0,240,Usable,,True
+Lung_Dx-G0032,Squamous Cell Carcinoma (SCC),4,4,0,0,236,Usable,,True
+Lung_Dx-G0033,Squamous Cell Carcinoma (SCC),5,4,1,0,1090,Usable,,True
+Lung_Dx-G0034,Squamous Cell Carcinoma (SCC),6,5,1,0,1492,Usable,,True
+Lung_Dx-G0035,Squamous Cell Carcinoma (SCC),6,5,1,0,1087,Usable,,True
+Lung_Dx-G0036,Squamous Cell Carcinoma (SCC),6,5,1,0,1210,Usable,,True
+Lung_Dx-G0037,Squamous Cell Carcinoma (SCC),7,6,1,0,1832,Usable,,True
+Lung_Dx-G0038,Squamous Cell Carcinoma (SCC),6,5,1,0,1491,Usable,,True
+Lung_Dx-G0039,Squamous Cell Carcinoma (SCC),6,5,1,0,1363,Usable,,True
+Lung_Dx-G0040,Squamous Cell Carcinoma (SCC),6,5,1,0,1231,Usable,,True
+Lung_Dx-G0041,Squamous Cell Carcinoma (SCC),5,4,1,0,765,Usable,,True
+Lung_Dx-G0042,Squamous Cell Carcinoma (SCC),5,4,1,0,1120,Usable,,True
+Lung_Dx-G0043,Squamous Cell Carcinoma (SCC),5,4,1,0,1219,Usable,,True
+Lung_Dx-G0044,Squamous Cell Carcinoma (SCC),5,4,1,0,1094,Usable,,True
+Lung_Dx-G0045,Squamous Cell Carcinoma (SCC),5,4,1,0,978,Usable,,True
+Lung_Dx-G0046,Squamous Cell Carcinoma (SCC),5,4,1,0,1150,Usable,,True
+Lung_Dx-G0047,Squamous Cell Carcinoma (SCC),4,3,1,0,722,Usable,,True
+Lung_Dx-G0048,Squamous Cell Carcinoma (SCC),5,4,1,0,964,Usable,,True
+Lung_Dx-G0049,Squamous Cell Carcinoma (SCC),5,4,1,0,1458,Usable,,True
+Lung_Dx-G0050,Squamous Cell Carcinoma (SCC),5,4,1,0,998,Usable,,True
+Lung_Dx-G0051,Squamous Cell Carcinoma (SCC),5,4,1,0,1070,Usable,,True
+Lung_Dx-G0052,Squamous Cell Carcinoma (SCC),5,4,1,0,1044,Usable,,True
+Lung_Dx-G0053,Squamous Cell Carcinoma (SCC),5,4,1,0,840,Usable,,True
+Lung_Dx-G0054,Squamous Cell Carcinoma (SCC),5,4,1,0,1296,Usable,,True
+Lung_Dx-G0055,Squamous Cell Carcinoma (SCC),5,4,1,0,1333,Usable,,True
+Lung_Dx-G0056,Squamous Cell Carcinoma (SCC),5,4,1,0,1441,Usable,,True
+Lung_Dx-G0057,Squamous Cell Carcinoma (SCC),5,4,1,0,1033,Usable,,True
+Lung_Dx-G0058,Squamous Cell Carcinoma (SCC),5,4,1,0,1325,Usable,,True
+Lung_Dx-G0059,Squamous Cell Carcinoma (SCC),5,4,1,0,1057,Usable,,True
+Lung_Dx-G0060,Squamous Cell Carcinoma (SCC),5,4,1,0,1255,Usable,,True
+Lung_Dx-G0062,Squamous Cell Carcinoma (SCC),5,4,1,0,1002,Usable,,True
+Lung_Dx-A0251,Adenocarcinoma (ADC),5,4,1,0,941,Usable,,True
