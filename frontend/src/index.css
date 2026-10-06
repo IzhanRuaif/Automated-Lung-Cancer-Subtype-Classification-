@@ -16,20 +16,29 @@ option {
   background-color: #ffffff !important;
 }
 
-/* Force high-contrast dark text and distinct placeholders for light container inputs */
+/* Force high-contrast dark text for light inputs */
 .bg-white input,
 .bg-white select,
-.bg-white textarea,
-input:not(.bg-slate-950),
-select:not(.bg-slate-950),
-textarea:not(.bg-slate-950) {
+.bg-white textarea {
   color: #0f172a !important;
   -webkit-text-fill-color: #0f172a !important;
 }
 
-input:not(.bg-slate-950)::placeholder,
-textarea:not(.bg-slate-950)::placeholder {
-  color: #64748b !important;
-  -webkit-text-fill-color: #64748b !important;
+/* Explicit white text and cursor for dark chatbot inputs */
+.chatbot-input,
+input.bg-slate-800,
+input.bg-slate-900,
+input.bg-slate-950 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #38bdf8 !important;
+}
+
+.chatbot-input::placeholder,
+input.bg-slate-800::placeholder,
+input.bg-slate-900::placeholder {
+  color: #94a3b8 !important;
+  -webkit-text-fill-color: #94a3b8 !important;
   opacity: 1 !important;
 }
+

@@ -231,7 +231,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
             ))}
           </div>
 
-          {/* Input Bar with High-Contrast Input Styling */}
+          {/* Input Bar with High-Contrast White Text Input */}
           <div className="p-3 bg-slate-950 border-t border-slate-800">
             <form
               onSubmit={(e) => {
@@ -245,7 +245,8 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
                 placeholder="Ask about CT scan, Grad-CAM, or IHC markers..."
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                className="flex-1 bg-slate-800 border border-slate-700 text-white font-medium placeholder-slate-400 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 selection:bg-blue-600 selection:text-white transition-all shadow-inner"
+                style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff', caretColor: '#38bdf8' }}
+                className="chatbot-input flex-1 bg-slate-800 border border-slate-700 text-white font-medium placeholder-slate-400 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 selection:bg-blue-600 selection:text-white transition-all shadow-inner"
               />
               <button
                 type="submit"
