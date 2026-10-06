@@ -15,8 +15,13 @@ data/dicom/
 *.nii
 *.nii.gz
 *.pt
+*.pth
 *.onnx
 *.h5
+data/uploads/*.jpg
+data/uploads/*.png
+data/uploads/gradcam/
+reports/*.pdf
 ml/reports/*.png
 ml/reports/*.jpg
 
