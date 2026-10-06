@@ -67,4 +67,15 @@ export const api = {
     const res = await apiClient.get('/reports');
     return res.data;
   },
+
+  // Clinical Chatbot
+  sendChatMessage: async (message: string, patientName?: string, predictedSubtype?: string, confidenceScore?: number) => {
+    const res = await apiClient.post('/chat', {
+      message,
+      patient_name: patientName,
+      predicted_subtype: predictedSubtype,
+      confidence_score: confidenceScore,
+    });
+    return res.data;
+  },
 };

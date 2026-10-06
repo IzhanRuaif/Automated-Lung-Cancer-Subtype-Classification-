@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, Send, Bot, User, Sparkles, X, Minimize2, ChevronUp, Stethoscope, RefreshCw, Cpu, ShieldCheck } from 'lucide-react';
+import { api } from '../api/client';
 
 interface Message {
   id: string;
@@ -52,7 +53,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
     'Why CBAM Attention over standard CNN?',
   ];
 
-  const handleSendMessage = (textToSend?: string) => {
+  const handleSendMessage = async (textToSend?: string) => {
     const text = textToSend || inputMessage;
     if (!text.trim()) return;
 
@@ -67,8 +68,18 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
     if (!textToSend) setInputMessage('');
     setIsTyping(true);
 
-    // Simulate AI response generation
-    setTimeout(() => {
+    try {
+      // Send message to Backend /api/v1/chat (which uses Gemini API if GEMINI_API_KEY is present)
+      const res = await api.sendChatMessage(text, patientName, currentSubtype, confidenceScore);
+      const botMsg: Message = {
+        id: (Date.now() + 1).toString(),
+        sender: 'bot',
+        text: res.reply,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      };
+      setMessages((prev) => [...prev, botMsg]);
+    } catch (err) {
+      // Instant Fallback to Clinical Rule Engine
       let replyText = '';
       const lower = text.toLowerCase();
 
@@ -94,10 +105,10 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
         text: replyText,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
-
       setMessages((prev) => [...prev, botMsg]);
+    } finally {
       setIsTyping(false);
-    }, 600);
+    }
   };
 
   // Helper function to format bold and code markdown cleanly

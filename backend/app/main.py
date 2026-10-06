@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from app.database.session import engine, Base, SessionLocal
 from app.models.models import User
 from app.core.security import get_password_hash
-from app.api import auth, patients, images, predictions, reports
+from app.api import auth, patients, images, predictions, reports, chat
 
 # Create database tables if they do not exist
 Base.metadata.create_all(bind=engine)
@@ -61,6 +61,7 @@ app.include_router(patients.router, prefix="/api/v1")
 app.include_router(images.router, prefix="/api/v1")
 app.include_router(predictions.router, prefix="/api/v1")
 app.include_router(reports.router, prefix="/api/v1")
+app.include_router(chat.router, prefix="/api/v1")
 
 @app.get("/")
 def read_root():
