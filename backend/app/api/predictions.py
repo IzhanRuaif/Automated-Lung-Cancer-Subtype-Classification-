@@ -4,35 +4,31 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database.session import get_db
-from app.models.models import CTImage, Prediction, Patient
+from app.models.models import CTImage, Prediction, Patient, User
 from app.schemas.schemas import PredictionCreate, PredictionResponse
 from app.services.ai_service import ai_service
+from app.api.deps import get_current_user
 
 router = APIRouter(prefix="/predictions", tags=["Predictions & Grad-CAM"])
 
 @router.post("", response_model=PredictionResponse, status_code=status.HTTP_201_CREATED)
-def create_prediction(payload: PredictionCreate, db: Session = Depends(get_db)):
+def create_prediction(
+    payload: PredictionCreate, 
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
     ct_image = db.query(CTImage).filter(CTImage.id == payload.image_id).first()
     if not ct_image:
         raise HTTPException(status_code=404, detail="CT Image not found")
 
-    patient = db.query(Patient).filter(Patient.id == ct_image.patient_id).first()
-    patient_code = patient.patient_code if patient else "P000"
+    patient = db.query(Patient).filter(Patient.id == ct_image.patient_id, Patient.doctor_id == current_user.id).first()
+    if not patient:
+        raise HTTPException(status_code=404, detail="Patient metadata not found or unauthorized")
 
-    # Infer subtype mapping from patient code if available
-    subtype_hint = "Adenocarcinoma (ADC)"
-    if "-G" in patient_code:
-        subtype_hint = "Squamous Cell Carcinoma (SCC)"
-    elif "-B" in patient_code:
-        subtype_hint = "Small Cell Lung Carcinoma (SCLC)"
-    elif "-E" in patient_code or "-C" in patient_code:
-        subtype_hint = "Large Cell Carcinoma (LCC)"
-
-    # Execute AI Inference and Grad-CAM Engine
+    # Execute Direct PyTorch AI Model Inference and Grad-CAM Engine
     res = ai_service.predict(
         image_path=ct_image.file_path,
-        patient_code=patient_code,
-        patient_subtype=subtype_hint
+        patient_code=patient.patient_code
     )
 
     prediction = Prediction(
@@ -60,12 +56,20 @@ def create_prediction(payload: PredictionCreate, db: Session = Depends(get_db)):
     )
 
 @router.get("/{prediction_id}", response_model=PredictionResponse)
-def get_prediction(prediction_id: int, db: Session = Depends(get_db)):
+def get_prediction(
+    prediction_id: int, 
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
     prediction = db.query(Prediction).filter(Prediction.id == prediction_id).first()
     if not prediction:
         raise HTTPException(status_code=404, detail="Prediction not found")
     
     ct_image = db.query(CTImage).filter(CTImage.id == prediction.image_id).first()
+    patient = db.query(Patient).filter(Patient.id == ct_image.patient_id, Patient.doctor_id == current_user.id).first() if ct_image else None
+    if not patient:
+        raise HTTPException(status_code=404, detail="Prediction record not found or unauthorized")
+
     probs = json.loads(prediction.probabilities_json) if isinstance(prediction.probabilities_json, str) else prediction.probabilities_json
     return PredictionResponse(
         id=prediction.id,

@@ -10,8 +10,8 @@ export const ReportsPage: React.FC<ReportsPageProps> = ({ reports }) => {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-extrabold text-slate-900">Analysis PDF Reports Archive</h2>
-        <p className="text-xs text-slate-500">Access and download generated patient analysis reports</p>
+        <h2 className="text-2xl font-extrabold text-white tracking-tight">Analysis PDF Reports Archive</h2>
+        <p className="text-xs text-slate-400 font-medium">Access and download generated patient analysis reports</p>
       </div>
 
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden divide-y divide-slate-100">

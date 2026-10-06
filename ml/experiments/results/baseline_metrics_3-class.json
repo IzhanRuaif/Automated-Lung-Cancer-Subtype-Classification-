@@ -1,0 +1,46 @@
+{
+  "accuracy": 1.0,
+  "precision_macro": 1.0,
+  "recall_macro": 1.0,
+  "f1_macro": 1.0,
+  "precision_weighted": 1.0,
+  "recall_weighted": 1.0,
+  "f1_weighted": 1.0,
+  "per_class": {
+    "Adenocarcinoma (ADC)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 37
+    },
+    "Squamous Cell Carcinoma (SCC)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 9
+    },
+    "Small Cell Lung Carcinoma (SCLC)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 5
+    }
+  },
+  "confusion_matrix": [
+    [
+      37,
+      0,
+      0
+    ],
+    [
+      0,
+      9,
+      0
+    ],
+    [
+      0,
+      0,
+      5
+    ]
+  ]
+}

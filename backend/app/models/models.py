@@ -17,6 +17,7 @@ class Patient(Base):
     __tablename__ = "patients"
 
     id = Column(Integer, primary_key=True, index=True)
+    doctor_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     patient_code = Column(String(50), unique=True, index=True, nullable=False)
     full_name = Column(String(255), nullable=False)
     age = Column(Integer, nullable=False)
@@ -24,6 +25,7 @@ class Patient(Base):
     medical_history = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
 
+    doctor = relationship("User", foreign_keys=[doctor_id])
     images = relationship("CTImage", back_populates="patient", cascade="all, delete-orphan")
     reports = relationship("Report", back_populates="patient", cascade="all, delete-orphan")
 
@@ -59,11 +61,13 @@ class Report(Base):
     __tablename__ = "reports"
 
     id = Column(Integer, primary_key=True, index=True)
+    doctor_id = Column(Integer, ForeignKey("users.id"), nullable=True)
     patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
     prediction_id = Column(Integer, ForeignKey("predictions.id"), nullable=False)
     pdf_path = Column(String(512), nullable=False)
     summary_text = Column(Text, nullable=True)
     generated_at = Column(DateTime, default=datetime.utcnow)
 
+    doctor = relationship("User", foreign_keys=[doctor_id])
     patient = relationship("Patient", back_populates="reports")
     prediction = relationship("Prediction", back_populates="report")

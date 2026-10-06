@@ -80,8 +80,8 @@ export const UploadPage: React.FC<UploadPageProps> = ({ patients, selectedPatien
     <div className="max-w-2xl mx-auto space-y-8">
       
       <div className="text-center space-y-2">
-        <h2 className="text-2xl font-extrabold text-slate-900">Upload Patient CT Scan</h2>
-        <p className="text-sm text-slate-500">
+        <h2 className="text-2xl font-extrabold text-white tracking-tight">Upload Patient CT Scan</h2>
+        <p className="text-sm text-slate-400 font-medium">
           Upload DICOM (`.dcm`) or image (`.png`, `.jpg`) CT slices for deep learning subtype classification and Grad-CAM spatial heatmap explanation.
         </p>
       </div>
@@ -101,10 +101,10 @@ export const UploadPage: React.FC<UploadPageProps> = ({ patients, selectedPatien
           <select
             value={patientId}
             onChange={(e) => setPatientId(Number(e.target.value))}
-            className="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2.5 bg-white border border-slate-300 text-slate-900 font-medium rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
           >
             {patients.map((p) => (
-              <option key={p.id} value={p.id}>
+              <option key={p.id} value={p.id} className="text-slate-900 bg-white font-medium py-1">
                 {p.patient_code} - {p.full_name} ({p.age} yrs, {p.gender})
               </option>
             ))}

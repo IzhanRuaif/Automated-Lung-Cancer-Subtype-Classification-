@@ -50,13 +50,21 @@ class GradCAM:
         cam = F.relu(cam)
         cam = cam.cpu().numpy()
 
-        # Normalize CAM to [0, 1]
-        if np.max(cam) > 0:
-            cam = cam / np.max(cam)
-
         # Resize heatmap to input tensor dimensions
         h, w = input_tensor.shape[2], input_tensor.shape[3]
         heatmap = cv2.resize(cam, (w, h))
+
+        # Suppress outer border padding artifacts outside lung parenchyma
+        border_mask = np.ones((h, w), dtype=np.float32)
+        border_mask[:20, :] = 0.05
+        border_mask[-20:, :] = 0.05
+        border_mask[:, :20] = 0.05
+        border_mask[:, -20:] = 0.05
+        heatmap = heatmap * border_mask
+
+        if np.max(heatmap) > 0:
+            heatmap = heatmap / np.max(heatmap)
+
         return heatmap, target_class, F.softmax(output, dim=1).detach().cpu().numpy()[0]
 
 def create_gradcam_overlay(input_tensor, heatmap, alpha=0.5):

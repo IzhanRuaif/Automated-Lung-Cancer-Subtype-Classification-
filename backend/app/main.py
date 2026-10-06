@@ -28,7 +28,7 @@ if not doctor_user:
     doctor_user = User(
         email="doctor@hospital.org",
         hashed_password=get_password_hash("doctor123"),
-        full_name="Dr. Alex Morgan, MD",
+        full_name="Dr. Mohammed Izhan, MD",
         role="doctor"
     )
     db_session.add(doctor_user)

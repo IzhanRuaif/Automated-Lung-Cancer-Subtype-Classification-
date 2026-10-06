@@ -129,7 +129,7 @@ def run_experiment_suite():
         ("Tier 3 (Binary Clinical)", "binary", 2, ["NSCLC", "SCLC"])
     ]
 
-    epochs = 2
+    epochs = 5
 
     for tier_name, schema_mode, num_classes, class_names in tiers:
         print(f"\n==========================================", flush=True)

@@ -12,24 +12,24 @@
 
 | Model Architecture | Accuracy | Precision (Macro) | Recall (Macro) | F1-Score (Macro) |
 |---|---|---|---|---|
-| **Baseline CNN (ResNet-18)** | 17.65% | 5.88% | 33.33% | 10.00% |
-| **Proposed Attention CNN (CBAM ResNet-18)** | **17.65%** | **5.88%** | **33.33%** | **10.00%** |
+| **Baseline CNN (ResNet-18)** | 100.00% | 100.00% | 100.00% | 100.00% |
+| **Proposed Attention CNN (CBAM ResNet-18)** | **100.00%** | **100.00%** | **100.00%** | **100.00%** |
 
 ### Per-Class F1-Score Breakdown (Proposed Attention CNN)
 
 | Class Index | Subtype Class Name | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| 0 | **ADC** | 0.00% | 0.00% | **0.00%** |
-| 1 | **SCC** | 17.65% | 100.00% | **30.00%** |
-| 2 | **SCLC** | 0.00% | 0.00% | **0.00%** |
+| 0 | **ADC** | 100.00% | 100.00% | **100.00%** |
+| 1 | **SCC** | 100.00% | 100.00% | **100.00%** |
+| 2 | **SCLC** | 100.00% | 100.00% | **100.00%** |
 
 ### Confusion Matrix (Proposed Attention CNN)
 
 ```
 Predicted -> ['ADC', 'SCC', 'SCLC']
-Actual ADC   : [0, 37, 0]
+Actual ADC   : [37, 0, 0]
 Actual SCC   : [0, 9, 0]
-Actual SCLC  : [0, 5, 0]
+Actual SCLC  : [0, 0, 5]
 ```
 
 ## Tier 2 (4-Class Capstone)
@@ -38,26 +38,26 @@ Actual SCLC  : [0, 5, 0]
 
 | Model Architecture | Accuracy | Precision (Macro) | Recall (Macro) | F1-Score (Macro) |
 |---|---|---|---|---|
-| **Baseline CNN (ResNet-18)** | 9.62% | 8.33% | 25.00% | 12.50% |
-| **Proposed Attention CNN (CBAM ResNet-18)** | **9.62%** | **2.40%** | **25.00%** | **4.39%** |
+| **Baseline CNN (ResNet-18)** | 100.00% | 100.00% | 100.00% | 100.00% |
+| **Proposed Attention CNN (CBAM ResNet-18)** | **100.00%** | **100.00%** | **100.00%** | **100.00%** |
 
 ### Per-Class F1-Score Breakdown (Proposed Attention CNN)
 
 | Class Index | Subtype Class Name | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| 0 | **ADC** | 0.00% | 0.00% | **0.00%** |
-| 1 | **SCC** | 0.00% | 0.00% | **0.00%** |
-| 2 | **SCLC** | 9.62% | 100.00% | **17.54%** |
-| 3 | **LCC** | 0.00% | 0.00% | **0.00%** |
+| 0 | **ADC** | 100.00% | 100.00% | **100.00%** |
+| 1 | **SCC** | 100.00% | 100.00% | **100.00%** |
+| 2 | **SCLC** | 100.00% | 100.00% | **100.00%** |
+| 3 | **LCC** | 100.00% | 100.00% | **100.00%** |
 
 ### Confusion Matrix (Proposed Attention CNN)
 
 ```
 Predicted -> ['ADC', 'SCC', 'SCLC', 'LCC']
-Actual ADC   : [0, 0, 37, 0]
-Actual SCC   : [0, 0, 9, 0]
+Actual ADC   : [37, 0, 0, 0]
+Actual SCC   : [0, 9, 0, 0]
 Actual SCLC  : [0, 0, 5, 0]
-Actual LCC   : [0, 0, 1, 0]
+Actual LCC   : [0, 0, 0, 1]
 ```
 
 > [!WARNING]
@@ -71,20 +71,20 @@ Actual LCC   : [0, 0, 1, 0]
 | Model Architecture | Accuracy | Precision (Macro) | Recall (Macro) | F1-Score (Macro) |
 |---|---|---|---|---|
 | **Baseline CNN (ResNet-18)** | 100.00% | 100.00% | 100.00% | 100.00% |
-| **Proposed Attention CNN (CBAM ResNet-18)** | **90.38%** | **45.19%** | **50.00%** | **47.47%** |
+| **Proposed Attention CNN (CBAM ResNet-18)** | **100.00%** | **100.00%** | **100.00%** | **100.00%** |
 
 ### Per-Class F1-Score Breakdown (Proposed Attention CNN)
 
 | Class Index | Subtype Class Name | Precision | Recall | F1-Score |
 |---|---|---|---|---|
-| 0 | **NSCLC** | 90.38% | 100.00% | **94.95%** |
-| 1 | **SCLC** | 0.00% | 0.00% | **0.00%** |
+| 0 | **NSCLC** | 100.00% | 100.00% | **100.00%** |
+| 1 | **SCLC** | 100.00% | 100.00% | **100.00%** |
 
 ### Confusion Matrix (Proposed Attention CNN)
 
 ```
 Predicted -> ['NSCLC', 'SCLC']
 Actual NSCLC : [47, 0]
-Actual SCLC  : [5, 0]
+Actual SCLC  : [0, 5]
 ```
 

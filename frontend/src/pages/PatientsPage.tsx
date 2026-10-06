@@ -54,8 +54,8 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
       {/* Header & Controls */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-extrabold text-slate-900">Patient Directory</h2>
-          <p className="text-xs text-slate-500">Manage patient records and associated CT imaging studies</p>
+          <h2 className="text-2xl font-extrabold text-white tracking-tight">Patient Directory</h2>
+          <p className="text-xs text-slate-400 font-medium">Manage patient records and associated CT imaging studies</p>
         </div>
 
         <button
@@ -75,7 +75,7 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search by patient name or code..."
-          className="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full pl-9 pr-4 py-2 bg-white border border-slate-200 rounded-lg text-sm text-slate-900 font-medium placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
         />
       </div>
 
@@ -121,14 +121,23 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
 
             <form onSubmit={handleCreate} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-700 uppercase mb-1">Patient Code (ID)</label>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 uppercase">Patient Code (ID)</label>
+                  <button
+                    type="button"
+                    onClick={() => setPatientCode(`PT-${Math.floor(1000 + Math.random() * 9000)}`)}
+                    className="text-[11px] font-medium text-indigo-600 hover:text-indigo-800 underline"
+                  >
+                    Auto-Generate Random ID
+                  </button>
+                </div>
                 <input
                   type="text"
                   required
                   value={patientCode}
                   onChange={(e) => setPatientCode(e.target.value)}
-                  placeholder="e.g. Lung_Dx-A0105"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-mono"
+                  placeholder="e.g. PT-4092 or Lung_Dx-A0105"
+                  className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 font-mono font-bold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
                 />
               </div>
 
@@ -140,7 +149,7 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="John Doe"
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+                  className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 font-medium placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
                 />
               </div>
 
@@ -152,7 +161,7 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
                     required
                     value={age}
                     onChange={(e) => setAge(Number(e.target.value))}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+                    className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
                   />
                 </div>
                 <div>
@@ -160,10 +169,10 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
                   <select
                     value={gender}
                     onChange={(e) => setGender(e.target.value)}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+                    className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
                   >
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="Male" className="text-slate-900 bg-white">Male</option>
+                    <option value="Female" className="text-slate-900 bg-white">Female</option>
                   </select>
                 </div>
               </div>
@@ -175,7 +184,7 @@ export const PatientsPage: React.FC<PatientsPageProps> = ({ patients, onRefresh,
                   value={medicalHistory}
                   onChange={(e) => setMedicalHistory(e.target.value)}
                   placeholder="Smoking history, symptoms, prior radiological findings..."
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm"
+                  className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 font-medium placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
                 />
               </div>
 

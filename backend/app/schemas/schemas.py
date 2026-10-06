@@ -13,6 +13,12 @@ class LoginRequest(BaseModel):
     email: EmailStr
     password: str
 
+class UserRegister(BaseModel):
+    email: EmailStr
+    password: str
+    full_name: str
+    role: Optional[str] = "doctor"
+
 # Patient Schemas
 class PatientBase(BaseModel):
     patient_code: str

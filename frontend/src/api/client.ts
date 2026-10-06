@@ -23,6 +23,10 @@ export const api = {
     const res = await apiClient.post('/auth/login', { email, password });
     return res.data;
   },
+  register: async (email: string, password: string, fullName: string, role: string = 'doctor') => {
+    const res = await apiClient.post('/auth/register', { email, password, full_name: fullName, role });
+    return res.data;
+  },
 
   // Patients
   getPatients: async () => {

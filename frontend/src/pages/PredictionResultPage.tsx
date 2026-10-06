@@ -36,7 +36,7 @@ export const PredictionResultPage: React.FC<PredictionResultPageProps> = ({ pred
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="flex items-center space-x-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+          className="flex items-center space-x-2 text-sm font-semibold text-slate-300 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Dashboard</span>

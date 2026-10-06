@@ -1,0 +1,65 @@
+# Experiment Configuration for Lung Cancer Subtype Classification
+# Project: Automated Lung Cancer Subtype Classification using Deep CNNs and Attention Mechanisms
+# Review-2 Academic Capstone Benchmark Configuration
+
+reproducibility:
+  random_seed: 42
+  deterministic_cudnn: true
+
+dataset:
+  manifest_path: "data/metadata/manifest.json"
+  split_path: "data/metadata/patient_splits.json"
+  split_ratios:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  image_size: [224, 224]
+  input_channels: 3
+  lung_window:
+    level: -600
+    width: 1500
+
+preprocessing:
+  normalize: true
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+
+models:
+  baseline:
+    name: "ResNet-18 Baseline"
+    architecture: "BaselineCNN"
+    backbone: "resnet18"
+    dropout_rate: 0.5
+  proposed_cbam:
+    name: "ResNet-18 + CBAM Attention"
+    architecture: "AttentionCNN"
+    backbone: "resnet18"
+    attention_module: "CBAM (Channel + Spatial)"
+    reduction_ratio: 16
+    spatial_kernel_size: 7
+    dropout_rate: 0.5
+
+experiments:
+  tier1_primary:
+    schema_mode: "3-class"
+    num_classes: 3
+    class_names: ["Adenocarcinoma (ADC)", "Squamous Cell Carcinoma (SCC)", "Small Cell Lung Carcinoma (SCLC)"]
+  tier2_capstone:
+    schema_mode: "4-class"
+    num_classes: 4
+    class_names: ["Adenocarcinoma (ADC)", "Squamous Cell Carcinoma (SCC)", "Small Cell Lung Carcinoma (SCLC)", "Large Cell Carcinoma (LCC)"]
+    limitation_note: "LCC sample size N=5 (1 test patient case). Exploratory capstone benchmark only."
+
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "AdamW"
+  loss_function: "Weighted CrossEntropyLoss"
+  scheduler: "CosineAnnealingLR"
+
+output:
+  weights_dir: "ml/models/weights"
+  experiments_dir: "ml/experiments"
+  reports_dir: "ml/reports"
