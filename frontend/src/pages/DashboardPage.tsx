@@ -2,6 +2,7 @@ import React from 'react';
 import { Users, FileText, Activity, Layers, ArrowRight, ShieldCheck, Sparkles, Cpu } from 'lucide-react';
 import { Patient, Report } from '../types';
 import { PreprocessingPipelineDiagram } from '../components/PreprocessingPipelineDiagram';
+import { ResearchCharts } from '../components/ResearchCharts';
 
 interface DashboardPageProps {
   patients: Patient[];
@@ -96,6 +97,9 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ patients, reports,
         </div>
 
       </div>
+
+      {/* Benchmark Visualizations & Interactive Analytics */}
+      <ResearchCharts />
 
       {/* Workflow Diagram */}
       <PreprocessingPipelineDiagram />

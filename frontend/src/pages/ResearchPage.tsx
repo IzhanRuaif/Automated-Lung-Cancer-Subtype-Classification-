@@ -1,6 +1,8 @@
 import React from 'react';
 import { ShieldCheck, Cpu, Database, Activity } from 'lucide-react';
 import { PreprocessingPipelineDiagram } from '../components/PreprocessingPipelineDiagram';
+import { ResearchCharts } from '../components/ResearchCharts';
+import { ModelControlPanel } from '../components/ModelControlPanel';
 
 export const ResearchPage: React.FC = () => {
   return (
@@ -22,6 +24,12 @@ export const ResearchPage: React.FC = () => {
           <span>Cap-10 ResNet-18 CBAM Spec</span>
         </div>
       </div>
+
+      {/* Interactive Model Control Panel */}
+      <ModelControlPanel />
+
+      {/* Empirical Benchmark & Research Visualizations */}
+      <ResearchCharts />
 
       {/* Model Technical Card Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
