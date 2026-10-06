@@ -79,7 +79,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
       } else if (lower.includes('cbam') || lower.includes('cnn') || lower.includes('attention') || lower.includes('baseline')) {
         replyText = `**Why CBAM Attention is Superior:**\n\nStandard baseline CNNs (like ResNet-18 alone) treat all spatial regions equally. By adding **Convolutional Block Attention Modules (CBAM)** on Layers 3 & 4:\n1. **Channel Attention**: Suppresses noisy CT artifacts and emphasizes tumor texture features.\n2. **Spatial Attention**: Focuses GPU memory on the lung lesion boundary.\n\n*Result:* Boosts subtype classification accuracy from ~83% (Baseline) to **100% (CBAM Proposed)** on the TCIA evaluation benchmark.`;
       } else if (lower.includes('adc') || lower.includes('adenocarcinoma')) {
-        replyText = `**Adenocarcinoma (ADC) Subtype Card:**\n\n- **Prevalence**: Most common primary lung cancer (~40% of all lung cancers, 70.7% in TCIA cohort).\n- **CT Morphology**: Typically peripheral, well-defined or ground-glass opacity (GGO) nodules with peripheral spiculation.\n- **Histology**: Glandular differentiation or mucin production. positive for TTF-1 and Napsin A.`;
+        replyText = `**Adenocarcinoma (ADC) Subtype Card:**\n\n- **Prevalence**: Most common primary lung cancer (~40% of all lung cancers, 70.7% in TCIA cohort).\n- **CT Morphology**: Typically peripheral, well-defined or ground-glass opacity (GGO) nodules with peripheral spiculation.\n- **Histology**: Glandular differentiation or mucin production. Positive for TTF-1 and Napsin A.`;
       } else if (lower.includes('scc') || lower.includes('squamous')) {
         replyText = `**Squamous Cell Carcinoma (SCC) Subtype Card:**\n\n- **Prevalence**: ~25-30% of lung cancers (17.2% in TCIA cohort).\n- **CT Morphology**: Strongly associated with smoking history. Typically central hilar lesions, cavitary masses with bronchial obstruction.\n- **IHC Profile**: Strongly positive for p40, p63, and CK5/6; negative for TTF-1.`;
       } else if (lower.includes('sclc') || lower.includes('small cell')) {
@@ -100,13 +100,35 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
     }, 600);
   };
 
+  // Helper function to format bold and code markdown cleanly
+  const renderFormattedText = (text: string) => {
+    const lines = text.split('\n');
+    return lines.map((line, lIdx) => {
+      // Parse markdown bold **text** and `code`
+      const parts = line.split(/(\*\*.*?\*\*|`.*?`)/g);
+      return (
+        <div key={lIdx} className={line.startsWith('- ') ? 'pl-2 my-0.5' : 'my-0.5'}>
+          {parts.map((part, pIdx) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+              return <strong key={pIdx} className="font-bold text-blue-300">{part.slice(2, -2)}</strong>;
+            }
+            if (part.startsWith('`') && part.endsWith('`')) {
+              return <code key={pIdx} className="bg-slate-900 border border-slate-700 text-cyan-300 px-1.5 py-0.5 rounded font-mono text-[10.5px]">{part.slice(1, -1)}</code>;
+            }
+            return <span key={pIdx}>{part}</span>;
+          })}
+        </div>
+      );
+    });
+  };
+
   return (
     <>
       {/* Floating Launcher Button */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 px-4 py-3 bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 hover:to-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-900/30 flex items-center space-x-2.5 transition-all hover:scale-105 border border-blue-400/30"
+          className="fixed bottom-6 right-6 z-50 px-4 py-3 bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 hover:to-indigo-600 text-white font-bold rounded-2xl shadow-xl shadow-blue-900/40 flex items-center space-x-2.5 transition-all hover:scale-105 border border-blue-400/30"
         >
           <div className="relative">
             <Stethoscope className="w-5 h-5 text-blue-200" />
@@ -119,7 +141,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
 
       {/* Chat Window Modal / Drawer */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-full sm:w-[420px] bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden font-sans text-white flex flex-col max-h-[600px] h-[520px]">
+        <div className="fixed bottom-6 right-6 z-50 w-full sm:w-[440px] bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden font-sans text-white flex flex-col max-h-[620px] h-[540px]">
           
           {/* Header */}
           <div className="bg-slate-950 px-5 py-4 border-b border-slate-800 flex items-center justify-between">
@@ -136,24 +158,22 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
               </div>
             </div>
 
-            <div className="flex items-center space-x-1">
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Current Target Banner */}
-          <div className="bg-blue-950/60 border-b border-blue-900/40 px-4 py-2 flex items-center justify-between text-[11px] font-mono">
+          <div className="bg-blue-950/70 border-b border-blue-900/50 px-4 py-2 flex items-center justify-between text-[11px] font-mono">
             <span className="text-slate-300">Active Scan: <b className="text-blue-300">{currentSubtype}</b></span>
             <span className="text-emerald-400 font-bold">{(confidenceScore * 100).toFixed(1)}% Conf</span>
           </div>
 
           {/* Messages Container */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-3 text-xs bg-slate-900/90">
+          <div className="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs bg-slate-950/80">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -166,20 +186,13 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
                 )}
                 
                 <div
-                  className={`max-w-[82%] p-3.5 rounded-2xl space-y-1.5 leading-relaxed ${
+                  className={`max-w-[85%] p-3.5 rounded-2xl space-y-1.5 leading-relaxed text-[12px] ${
                     msg.sender === 'user'
-                      ? 'bg-blue-600 text-white rounded-tr-none'
-                      : 'bg-slate-800/90 text-slate-100 border border-slate-700/80 rounded-tl-none font-sans'
+                      ? 'bg-blue-600 text-white font-medium rounded-tr-none shadow-md'
+                      : 'bg-slate-800 text-slate-100 border border-slate-700/80 rounded-tl-none font-sans shadow-sm'
                   }`}
                 >
-                  <div className="whitespace-pre-line text-[11.5px]">
-                    {msg.text.split('\n').map((line, idx) => {
-                      if (line.startsWith('**') && line.endsWith('**')) {
-                        return <p key={idx} className="font-bold text-blue-300 mb-1">{line.replace(/\*\*/g, '')}</p>;
-                      }
-                      return <p key={idx} className="mb-0.5">{line}</p>;
-                    })}
-                  </div>
+                  <div className="text-[12px]">{renderFormattedText(msg.text)}</div>
                   <span className={`block text-[9px] font-mono text-right ${msg.sender === 'user' ? 'text-blue-200' : 'text-slate-400'}`}>
                     {msg.timestamp}
                   </span>
@@ -206,19 +219,19 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
           </div>
 
           {/* Quick Suggestion Chips */}
-          <div className="px-3 py-2 bg-slate-950 border-t border-slate-800 flex items-center space-x-1.5 overflow-x-auto no-scrollbar">
+          <div className="px-3 py-2 bg-slate-950 border-t border-slate-800/80 flex items-center space-x-1.5 overflow-x-auto">
             {suggestionChips.map((chip, idx) => (
               <button
                 key={idx}
                 onClick={() => handleSendMessage(chip)}
-                className="px-2.5 py-1 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-blue-300 text-[10px] font-medium rounded-lg border border-slate-800 whitespace-nowrap transition-colors shrink-0"
+                className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-blue-300 text-[10.5px] font-medium rounded-lg border border-slate-700 whitespace-nowrap transition-colors shrink-0 shadow-sm"
               >
                 {chip}
               </button>
             ))}
           </div>
 
-          {/* Input Bar */}
+          {/* Input Bar with High-Contrast Input Styling */}
           <div className="p-3 bg-slate-950 border-t border-slate-800">
             <form
               onSubmit={(e) => {
@@ -232,12 +245,12 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
                 placeholder="Ask about CT scan, Grad-CAM, or IHC markers..."
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
-                className="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                className="flex-1 bg-slate-800 border border-slate-700 text-white font-medium placeholder-slate-400 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 selection:bg-blue-600 selection:text-white transition-all shadow-inner"
               />
               <button
                 type="submit"
                 disabled={!inputMessage.trim()}
-                className="p-2 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white rounded-xl transition-all shadow-md shadow-blue-600/20"
+                className="p-2.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white rounded-xl transition-all shadow-md shadow-blue-600/30 flex items-center justify-center shrink-0"
               >
                 <Send className="w-4 h-4" />
               </button>
