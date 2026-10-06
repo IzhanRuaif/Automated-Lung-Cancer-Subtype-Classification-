@@ -152,7 +152,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
 
       {/* Chat Window Modal / Drawer */}
       {isOpen && (
-        <div className="fixed bottom-6 right-6 z-50 w-full sm:w-[440px] bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden font-sans text-white flex flex-col max-h-[620px] h-[540px]">
+        <div className="fixed bottom-6 right-6 z-50 w-[calc(100vw-3rem)] sm:w-[460px] bg-slate-900/95 backdrop-blur-lg border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden font-sans text-white flex flex-col max-h-[640px] h-[560px] transition-all">
           
           {/* Header */}
           <div className="bg-slate-950 px-5 py-4 border-b border-slate-800 flex items-center justify-between">
@@ -184,7 +184,7 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
           </div>
 
           {/* Messages Container */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs bg-slate-950/80">
+          <div className="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs bg-slate-950/80 pr-2">
             {messages.map((msg) => (
               <div
                 key={msg.id}
@@ -229,8 +229,8 @@ export const ClinicalChatbot: React.FC<ClinicalChatbotProps> = ({
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Quick Suggestion Chips */}
-          <div className="px-3 py-2 bg-slate-950 border-t border-slate-800/80 flex items-center space-x-1.5 overflow-x-auto">
+          {/* Quick Suggestion Chips with Hidden Scrollbar */}
+          <div className="px-3 py-2 bg-slate-950 border-t border-slate-800/80 flex items-center space-x-1.5 overflow-x-auto no-scrollbar">
             {suggestionChips.map((chip, idx) => (
               <button
                 key={idx}
