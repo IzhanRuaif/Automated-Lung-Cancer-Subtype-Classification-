@@ -8,6 +8,7 @@ import { UploadPage } from './pages/UploadPage';
 import { PredictionResultPage } from './pages/PredictionResultPage';
 import { ReportsPage } from './pages/ReportsPage';
 import { ResearchPage } from './pages/ResearchPage';
+import { ClinicalChatbot } from './components/ClinicalChatbot';
 import { api } from './api/client';
 import { User, Patient, Prediction, Report } from './types';
 
@@ -60,8 +61,12 @@ export function App() {
     );
   }
 
+  const currentPatient = activePrediction
+    ? patients.find((p) => p.id === activePrediction.image_id) || patients[0]
+    : undefined;
+
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900 selection:bg-blue-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900 selection:bg-blue-500 selection:text-white relative">
       <Header user={user} activePage={currentPage} onNavigate={setCurrentPage} onLogout={handleLogout} />
 
       {/* Main Container Workspace */}
@@ -175,7 +180,7 @@ export function App() {
           {currentPage === 'result' && activePrediction && (
             <PredictionResultPage
               prediction={activePrediction}
-              patient={patients.find((p) => p.id === activePrediction.image_id) || patients[0]}
+              patient={currentPatient}
               onBack={() => setCurrentPage('dashboard')}
             />
           )}
@@ -190,6 +195,13 @@ export function App() {
         </main>
 
       </div>
+
+      {/* Oncology Clinical AI Copilot Floating Drawer */}
+      <ClinicalChatbot
+        currentSubtype={activePrediction?.predicted_subtype || 'Adenocarcinoma (ADC)'}
+        confidenceScore={activePrediction?.confidence_score || 0.984}
+        patientName={currentPatient?.full_name || 'Patient Directory'}
+      />
     </div>
   );
 }
