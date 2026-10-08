@@ -26,10 +26,13 @@ def create_prediction(
         raise HTTPException(status_code=404, detail="Patient metadata not found or unauthorized")
 
     # Execute Direct PyTorch AI Model Inference and Grad-CAM Engine
-    res = ai_service.predict(
-        image_path=ct_image.file_path,
-        patient_code=patient.patient_code
-    )
+    try:
+        res = ai_service.predict(
+            image_path=ct_image.file_path,
+            patient_code=patient.patient_code
+        )
+    except ValueError as val_err:
+        raise HTTPException(status_code=400, detail=str(val_err))
 
     prediction = Prediction(
         image_id=ct_image.id,

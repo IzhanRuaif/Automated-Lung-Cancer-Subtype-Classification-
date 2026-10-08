@@ -36,8 +36,17 @@ async def upload_ct_image(
     saved_filename = f"doc_{current_user.id}_pt_{patient.id}_{file.filename}"
     file_path = os.path.join(upload_dir, saved_filename)
 
+    from app.services.ai_service import ai_service
+
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
+
+    # Validate if uploaded file is a valid Thoracic CT scan
+    is_valid, validation_msg = ai_service.validate_lung_ct_scan(file_path)
+    if not is_valid:
+        if os.path.exists(file_path):
+            os.remove(file_path)
+        raise HTTPException(status_code=400, detail=validation_msg)
 
     ct_image = CTImage(
         patient_id=patient.id,
