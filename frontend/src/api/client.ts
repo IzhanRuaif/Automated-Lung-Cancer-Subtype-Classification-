@@ -17,6 +17,16 @@ apiClient.interceptors.request.use((config) => {
   return config;
 });
 
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      localStorage.removeItem('access_token');
+    }
+    return Promise.reject(error);
+  }
+);
+
 export const api = {
   // Auth
   login: async (email: string, password: string) => {
